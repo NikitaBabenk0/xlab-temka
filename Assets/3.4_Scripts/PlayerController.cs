@@ -4,11 +4,10 @@ using UnityEngine;
 
 namespace TZ
 {
-    public class PlayerController : MonoBehaviour
+    public class Playerconroller : MonoBehaviour
     {
+
         public Spawner spawner;
-        public CloudController cloudController;
-        public List<Refresh> villagers;
         private void Update()
         {
             if (Input.GetKeyDown(KeyCode.X))
@@ -19,17 +18,12 @@ namespace TZ
             if (Input.GetKeyDown(KeyCode.Z))
             {
                 Debug.Log("Z key down");
-                cloudController.Action();
-
             }
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 Debug.Log("Space key down");
-                foreach (var villager in villagers)
-                {
-                    villager.ChangeTool();
-                }
             }
         }
     }
+
 }
