@@ -6695,7 +6695,7 @@ ParticleSystemRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_RenderMode: 5
+  m_RenderMode: 1
   m_MeshDistribution: 0
   m_SortMode: 0
   m_MinParticleSize: 0
@@ -6810,7 +6810,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: 5.08
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -8189,7 +8189,7 @@ ParticleSystem:
     x:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.19
+      scalar: 0
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -8242,7 +8242,7 @@ ParticleSystem:
     y:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.06
+      scalar: 0
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -8295,7 +8295,7 @@ ParticleSystem:
     z:
       serializedVersion: 2
       minMaxState: 0
-      scalar: -0.51
+      scalar: 0
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -10630,11 +10630,11 @@ ParticleSystem:
   TrailModule:
     enabled: 1
     mode: 0
-    ratio: 1
+    ratio: 0.66
     lifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.25
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -10684,11 +10684,11 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-    minVertexDistance: 0.2
+    minVertexDistance: 0.48
     textureMode: 0
-    textureScale: {x: 1, y: 1}
+    textureScale: {x: 0.62, y: 1}
     ribbonCount: 1
-    shadowBias: 0.5
+    shadowBias: 0
     worldSpace: 0
     dieWithParticles: 1
     sizeAffectsWidth: 1
@@ -11459,8 +11459,8 @@ Transform:
   m_GameObject: {fileID: 687286300}
   serializedVersion: 2
   m_LocalRotation: {x: 0.70793694, y: -0, z: -0, w: 0.70627576}
-  m_LocalPosition: {x: -0.29999542, y: -0.23001099, z: -0.049999237}
-  m_LocalScale: {x: 10.296947, y: 8.961195, z: 0.93756014}
+  m_LocalPosition: {x: -0.29999542, y: -3.6, z: -0.049999237}
+  m_LocalScale: {x: 6.16853, y: 6.619687, z: 0.7014554}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1022963113}
@@ -14633,11 +14633,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4241627824473718, guid: 89183a5c31b1c1b4f89c7e21d8ca741c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -474.75003
+      value: -470.8
       objectReference: {fileID: 0}
     - target: {fileID: 4241627824473718, guid: 89183a5c31b1c1b4f89c7e21d8ca741c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 27.95
+      value: 31.5
       objectReference: {fileID: 0}
     - target: {fileID: 4241627824473718, guid: 89183a5c31b1c1b4f89c7e21d8ca741c, type: 3}
       propertyPath: m_LocalRotation.w
