@@ -21,7 +21,7 @@ namespace TZ
                 return;
             }
             m_moved = true;
-            cloud.PlayFX();
+            cloud.StopFX();
             m_targetIndex++;
             if (m_targetIndex >= targets.Length) { m_targetIndex = 0; }
         }
@@ -36,7 +36,7 @@ namespace TZ
             {
                 cloud.transform.position = targetPosition;
                 m_moved = false;
-                cloud.StopFX();
+                cloud.PlayFX();
             }
             else
             {
