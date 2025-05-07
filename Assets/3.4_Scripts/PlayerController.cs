@@ -8,6 +8,8 @@ namespace TZ
     {
 
         public Spawner spawner;
+        public CloudController cloudController;
+
         private void Update()
         {
             if (Input.GetKeyDown(KeyCode.X))
@@ -18,6 +20,7 @@ namespace TZ
             if (Input.GetKeyDown(KeyCode.Z))
             {
                 Debug.Log("Z key down");
+                cloudController.Action();
             }
             if (Input.GetKeyDown(KeyCode.Space))
             {

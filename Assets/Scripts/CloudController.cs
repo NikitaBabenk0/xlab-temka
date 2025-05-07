@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-namespace Test
+namespace TZ 
 {
     public class CloudController : MonoBehaviour
     {
         private int m_targetIndex = 0;
         private bool m_moved = false;
-        public float moveSpeed = 0.001f;
-        public Transform[] targets;
+        public float moveSpeed = 10f;
         public Cloud cloud;
+        public Transform[] targets;
         public void Action()
         {
             Debug.Log("Cloudcontroller - try", this);
@@ -21,7 +21,7 @@ namespace Test
                 return;
             }
             m_moved = true;
-            cloud.StopFX();
+            cloud.PlayFX();
             m_targetIndex++;
             if (m_targetIndex >= targets.Length) { m_targetIndex = 0; }
         }
@@ -31,14 +31,17 @@ namespace Test
 
             Transform target = targets[m_targetIndex];
             Vector3 targetPosition = new Vector3(target.position.x, cloud.transform.position.y, target.position.z);
-            Vector3 offset = (targetPosition - cloud.transform.position).normalized * moveSpeed * Time.deltaTime;
-            if (Vector3.Distance(cloud.transform.position, targetPosition) < 0.1f)
+            Vector3 offset = ( targetPosition - cloud.transform.position).normalized * Time.deltaTime * moveSpeed;
+            if(Vector3.Distance(cloud.transform.position, targetPosition)<offset.magnitude)
             {
                 cloud.transform.position = targetPosition;
                 m_moved = false;
-                cloud.PlayFX();
+                cloud.StopFX();
             }
-            else { cloud.transform.Translate(offset); }
+            else
+            {
+                cloud.transform.Translate(offset);
+            }
         }
     }
 }
