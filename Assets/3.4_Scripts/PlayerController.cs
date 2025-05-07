@@ -9,6 +9,7 @@ namespace TZ
 
         public Spawner spawner;
         public CloudController cloudController;
+        public List<Refresh> villagers;
 
         private void Update()
         {
@@ -25,6 +26,10 @@ namespace TZ
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 Debug.Log("Space key down");
+                foreach(var villager in villagers)
+                {
+                    villager.ChangeTool();
+                }    
             }
         }
     }
